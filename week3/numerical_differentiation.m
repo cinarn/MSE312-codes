@@ -7,7 +7,7 @@ f = @(t) 5 + 2*t.^0.5;    % f(t) = 5 + 2√t
 fprime = @(t) t.^-0.5;    % f'(t) = 1/√t (exact derivative)
 
 % Define step size and domain for t
-h = 0.5;                    % Step size (h = 2)
+h = 0.5;                    % Step size
 t = 5:h:15;               % Generate t values from 5 to 15 with step h
 N = length(t);            % Number of points in t
 
