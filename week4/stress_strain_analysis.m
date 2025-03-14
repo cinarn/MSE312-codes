@@ -49,4 +49,4 @@ hold off;
 % Display computed values with correct units
 fprintf('Young\''s Modulus: %.2f MPa\n', young_modulus);
 fprintf('Proof Stress: %.2f MPa\n', proof_stress);
-fprintf('Toughness: %.2f MJ/m³\n', toughness); % Corrected unit
+fprintf('Toughness: %.2f MJ/m³\n', toughness);
