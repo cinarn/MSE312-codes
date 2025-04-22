@@ -27,7 +27,7 @@ for i = 1:max_num_iter
     end
     
     % Display current iteration details
-    fprintf('Iter: %d, x = %.8f, delta = %.8f, f(x) = %.8f, f\'(x) = %.8f\n', ...
+    fprintf('Iter: %d, x = %.8f, delta = %.8f, f(x) = %.8f, f\''(x) = %.8f\n', ...
         i, x, delta, f(x), fp(x));
 end
 
