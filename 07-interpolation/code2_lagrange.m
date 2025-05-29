@@ -12,12 +12,13 @@ yy = zeros(size(xx));
 
 % Compute the Lagrange interpolation polynomial at each point in xx
 for k = 1:length(xx)
+    z = xx(k);
     sum = 0;  % Initialize the interpolated value at xx(k)
     for i = 1:n
         L = 1;  % Initialize L_i(xx(k))
         for j = 1:n
             if i ~= j
-                L = L * (xx(k) - x(j)) / (x(i) - x(j));  % Compute basis polynomial
+                L = L * (z - x(j)) / (x(i) - x(j));  % Compute basis polynomial
             end
         end
         sum = sum + y(i) * L;  % Accumulate weighted basis polynomial

@@ -40,9 +40,10 @@ f = @(i, z) a(i)/(6*h(i))*(x(i+1)-z)^3 ...
 xx = linspace(min(x), max(x), 100);
 yy = zeros(size(xx));
 for k = 1:length(xx)
+    z = xx(k);
     for i = 1:n-1
-        if xx(k) >= x(i) && xx(k) <= x(i+1)
-            yy(k) = f(i,xx(k));
+        if z >= x(i) && z <= x(i+1)
+            yy(k) = f(i,z);
             break;
         end
     end

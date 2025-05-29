@@ -11,10 +11,11 @@ yy = zeros(size(xx));
 
 % Apply linear interpolation for each interval
 for k = 1:length(xx)
+    z = xx(k)
     for i = 1:length(x)-1
-        if xx(k) >= x(i) && xx(k) <= x(i+1)
+        if x(i) <= z && z <= x(i+1)
             % Linearly interpolate between y(i) and y(i+1)
-            yy(k) = y(i) + (y(i+1) - y(i)) / (x(i+1) - x(i)) * (xx(k) - x(i));
+            yy(k) = (z-x(i+1))/(x(i)-x(i+1))*y(i) + (z-x(i))/(x(i+1)-x(i))*y(i+1);
             break;
         end
     end
